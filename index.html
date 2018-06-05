@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><h1 id="title">FCC Survey Form</h1></title>
+</head>
+<body>
+<div class="container">
+    <p class="description">A quick survey about choice topics</p>
+    <div><form>
+        <label for="name">Can I get your name?</label>
+        <label for="email">Can I get your email address?</label>
+        <label for="number">What's your phone number? Domestic Numbers Only</label>
+        <input id="name" type="text" name="Your Name:">
+        <input id="email" type="email" name="Your Email:">
+        <input id="number" type="number" name="Your Number" required pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
+
+    </form></div>
+</div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" ></script>
+</body>
+</html>
