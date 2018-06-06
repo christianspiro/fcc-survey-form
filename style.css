@@ -1,3 +1,17 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #544a7d, #ffd452);
+    min-width:350px;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+    margin:auto;
+    padding:20px;
+    width:40vw;
+}
 .dropdown {
     height: 35px;
     width: 140px;
@@ -6,4 +20,42 @@
     margin-top: 15px;
     border: 1px solid #c0c0c0;
     border-radius: 2px;
+}
+.left{
+  text-align: left;
+    width:20%;
+    float: left;
+}
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+.radio{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.right{
+    text-align: right;
+    width:80%;
+    float: right;
+}
+#submit{
+    background: linear-gradient(to left, #544a7d, #ffd452);
+    font-size:2em;
+    border:none;
+    color: lavender;
+    border-radius: 4px;
+    text-align: center;
+    padding:10px 10px;
+}
+#description{
+    text-align: center
+}
+#title{
+text-align: center;
 }

@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>FCC Survey Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
 </head>
 <body>
 <h1 id="title">Just some Questions!</h1>
+<p id="description">A quick survey about choice topics</p>
 <div class="container">
 
-    <p id="description">A quick survey about choice topics</p>
+<br>
+    <br>
     <form id="survey-form">
-        <div>
+        <div class="left"><p> Let's get started!</p></div>
+        <div class="right">
             <label id="name-label" for="name">Can I get your name?</label>
-            <input id="name" type="text" name="Your Name:" placeholder="Name" required>
+            <input class="input-field" id="name" type="text" name="Your Name:" placeholder="Name" required>
             <br>
-            <label id="email-label" for="email">Can I get your email address?</label>
-            <input id="email" type="email" name="Your Email:" placeholder="Email" required>
+            <label  id="email-label" for="email">Can I get your email address?</label>
+            <input class="input-field" id="email" type="email" name="Your Email:" placeholder="Email" required>
             <br>
-            <label id="number-label" for="number">What's your phone number? Domestic Numbers Only</label>
-            <input id="number" type="number" name="Your Number" min="1" max="65498498479" placeholder="0123" required pattern=">0">
+            <label id="number-label" for="number">What's your age?</label>
+            <input class="input-field" id="number" type="number" name="Your Number" min="1" max="99" placeholder="0" required pattern=">0">
         </div>
-
-        <div>
+        <div class="left"><p>A selection of options!</p></div>
+        <div class="right">
             <select id="dropdown" name="likes" class="dropdown" title="Bands">
                 <option disabled value>Pick a Band!</option>
                 <option value="always">Alvvays</option>
@@ -33,6 +37,8 @@
                 <option value="other">Other</option>
             </select>
         </div>
+        <div class="left"><p>Pick your preference if you have it!</p></div>
+        <div class="right">
         <ul class="radio">
             <li><label for="fender"> Fenders </label>
                 <input type="radio" id="fender" name="btn" value="1"></li>
@@ -45,26 +51,27 @@
             <li><label for="mac"> Mac </label>
             <input type="radio" id="mac" name="btn" value="4"></li>
         </ul>
-
-        <div>
+        </div>
+        <div class="left"><p> How do you feel about checkboxes?</p></div>
+        <div class="right">
                 <input type="checkbox" id="option-one" name="btn" value="0">
                 <label for="option-one">Checkboxes are so good!</label>
-
+                <br>
                 <input type="checkbox" id="option-two" name="btn" value="1">
                 <label for="option-two">Checkboxes are so bad!</label>
-
+                <br>
 
                 <input type="checkbox" id="option-three" name="btn" value="2">
                 <label for="option-three">I am neutral on Checkboxes.</label>
         </div>
-
-        <div>
-            <textarea name="text-area" title="Comments"
+        <div class="left"><p> Would you like to add anything else?</p></div>
+        <div class="right">
+            <textarea name="text-area" class="input-field" title="Comments"
                       rows="10" cols="50">Got any Comments?</textarea>
         </div>
-        <div>
+
             <button id="submit">Submit your Opinions!</button>
-        </div>
+
 
 
     </form>
