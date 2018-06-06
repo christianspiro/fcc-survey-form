@@ -2,21 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><h1 id="title">FCC Survey Form</h1></title>
+    <title>FCC Survey Form</title>
+    <link href="style.css" rel="stylesheet">
+
 </head>
 <body>
+<h1 id="title">Just some Questions!</h1>
 <div class="container">
-    <p class="description">A quick survey about choice topics</p>
-    <div><form>
-        <label for="name">Can I get your name?</label>
-        <label for="email">Can I get your email address?</label>
-        <label for="number">What's your phone number? Domestic Numbers Only</label>
-        <input id="name" type="text" name="Your Name:">
-        <input id="email" type="email" name="Your Email:">
-        <input id="number" type="number" name="Your Number" required pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
 
-    </form></div>
+    <p id="description">A quick survey about choice topics</p>
+    <form id="survey-form">
+        <div>
+            <label id="name-label" for="name">Can I get your name?</label>
+            <input id="name" type="text" name="Your Name:" placeholder="Name" required>
+            <br>
+            <label id="email-label" for="email">Can I get your email address?</label>
+            <input id="email" type="email" name="Your Email:" placeholder="Email" required>
+            <br>
+            <label id="number-label" for="number">What's your phone number? Domestic Numbers Only</label>
+            <input id="number" type="number" name="Your Number" min="1" max="65498498479" placeholder="0123" required pattern=">0">
+        </div>
+
+        <div>
+            <select id="dropdown" name="likes" class="dropdown" title="Bands">
+                <option disabled value>Pick a Band!</option>
+                <option value="always">Alvvays</option>
+                <option value="tops">TOPS</option>
+                <option value="aM">Arctic Monkeys</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <ul class="radio">
+            <li><label for="fender"> Fenders </label>
+                <input type="radio" id="fender" name="btn" value="1"></li>
+
+            <li><label for="gibson"> Gibson </label>
+            <input type="radio" id="gibson" name="btn" value="2"></li>
+
+            <li><label for="windows"> Windows </label>
+            <input type="radio" id="windows" name="btn" value="3"></li>
+            <li><label for="mac"> Mac </label>
+            <input type="radio" id="mac" name="btn" value="4"></li>
+        </ul>
+
+        <div>
+                <input type="checkbox" id="option-one" name="btn" value="0">
+                <label for="option-one">Checkboxes are so good!</label>
+
+                <input type="checkbox" id="option-two" name="btn" value="1">
+                <label for="option-two">Checkboxes are so bad!</label>
+
+
+                <input type="checkbox" id="option-three" name="btn" value="2">
+                <label for="option-three">I am neutral on Checkboxes.</label>
+        </div>
+
+        <div>
+            <textarea name="text-area" title="Comments"
+                      rows="10" cols="50">Got any Comments?</textarea>
+        </div>
+        <div>
+            <button id="submit">Submit your Opinions!</button>
+        </div>
+
+
+    </form>
 </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" ></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
